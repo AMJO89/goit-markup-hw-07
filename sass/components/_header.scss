@@ -1,0 +1,109 @@
+.box-header{
+    font-family: 'Roboto';
+    font-style: normal;
+    & .container{
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.header-nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    & .logo{
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.19;
+        text-decoration: none;
+        color: $accent-color;
+    }
+}
+
+.header-nav__list {
+    position: relative;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    width: 293px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    left: 0;
+    .header-nav__link {
+        color: $color-tex-primary;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        text-transform: capitalize;
+        &:hover, &:focus {
+            color: $accent-color;
+        }
+    }
+    .nav__link--current {
+        color: $accent-color;
+        position:relative;
+        &::after {
+            position: absolute;
+            left: 0px;
+            width: 40px;
+            height: 4px;
+            content: "";
+            display: block;
+            bottom: -32px;
+            background-color: $accent-color;
+            border-radius: 2px;
+        }
+    }
+}
+
+.header-contact__list {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    height: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    .header-contact__item {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 30px;
+    }
+}
+
+.header-contact__link{
+    color: $color-text-secundary;
+    fill: $color-text-secundary;
+    text-decoration: none;
+    display: flex;
+    align-items:space-between;
+    align-items: center;
+    & svg {
+        margin-right: 10px;
+    }
+    &:hover {
+        color:$accent-color;
+        fill: $accent-color;
+    } 
+}

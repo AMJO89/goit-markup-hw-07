@@ -48,6 +48,11 @@ section{
 
 /* -------------------- header -------------------- */
 
+.box-header{
+  font-family: 'Roboto';
+  font-style: normal;
+}
+
 .box-header .container{
   height: 80px;
   display: flex;
@@ -79,8 +84,6 @@ section{
 
 .header-nav__list {
   position: relative;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -209,7 +212,12 @@ section{
   align-items: center;
   text-align: center;
 }
-.main-banner--title{
+.main-banner .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-banner__title{
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 900;
@@ -221,12 +229,7 @@ section{
   padding: 0px 250px;
   color: var(--primary-background-color);
 }
-.main-banner .container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.button--primary{
+.btn__banner{
   cursor: pointer;
   color: var(--primary-background-color);
   background-color: var(--accent-color);
@@ -286,7 +289,7 @@ section{
   width: 35px;
   height: 35px;
   border-radius: 25px;
-  background: #ffffff;
+  background: var(--primary-background-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .button--close .icon--close:hover,
@@ -308,7 +311,7 @@ section{
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--color-text-primary);
   margin-bottom: 12px;
 }
 .form{
@@ -350,7 +353,7 @@ section{
   position: relative;
   bottom: 38px;
   left: 15px;
-  fill: #212121;
+  fill: var(--color-text-primary);
 }
 .form-label:focus-within .label--icon {
   fill: var(--accent-color);
@@ -612,7 +615,7 @@ textarea#comments {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  }
+}
 
 /*contact-footer*/
 
@@ -735,7 +738,7 @@ fill: var(--primary-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: var(--primary-background-color);
-  background-color: var(--footer-color);
+  background-color: var(--accent-color);
 }
 
 .form-subscribe--email:hover {
@@ -754,7 +757,7 @@ fill: var(--primary-background-color);
   width: 200px;
   height: 50px;
   padding: 10px 28px;
-  color: var(--primary-white-color);
+  color: var(--primary-background-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid transparent;
@@ -784,6 +787,8 @@ fill: var(--primary-background-color);
   flex-direction: column;
   align-items: center;
   align-content: center;
+  font-family: 'Roboto';
+  font-style: normal;
 }
 .briefcase-nav {
   display: flex;
@@ -798,8 +803,6 @@ fill: var(--primary-background-color);
   border-radius: 4px;
   border: 0;
   padding: 6px 20px;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -845,7 +848,7 @@ fill: var(--primary-background-color);
   overflow: hidden;
   position: relative;
 }
-.briefcase-cards__item .card__product--overlap {
+.briefcase-cards__item .product__overlap {
   width: 370px;
   height: 294px;
   font-weight: 400;
@@ -858,13 +861,13 @@ fill: var(--primary-background-color);
   position: absolute;
   transform: translatey(100%); /* % positivo es de abajo hacia arriba en el eje y*/
 }
-.briefcase-cards__item:hover .card__product--overlap{
+.briefcase-cards__item:hover .product__overlap{
   top: 0;
   transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--timing-function);
   transform: translatey(0);
 }
-.card__product--title{
+.product__title{
   font-weight: 700;
   font-size: 18px;
   line-height: 36px;
@@ -877,7 +880,7 @@ fill: var(--primary-background-color);
   letter-spacing: 0.06em;
   margin: 20px 24px 2px 24px;
 }
-.card__product--text{
+.product__text{
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
