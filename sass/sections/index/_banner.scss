@@ -8,23 +8,21 @@
     flex-direction: row;
     align-items: center;
     text-align: center;
-    &.container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 }
-.main-banner__title{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 60px;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 0px 250px;
-    color: $primary-background-color;
+.main-banner .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main-banner__title{
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0px 250px;
+        color: $primary-background-color;
+    }
 }
 
 .btn__banner{
@@ -45,11 +43,6 @@
 
 /*Backdrop*/
 
-.modal{
-    padding: 40px;
-    width: 528px;
-    height: 581px;
-}
 .is-hidden{
     display: none;
 }
@@ -72,9 +65,13 @@
         pointer-events: none;
     }
 }
+.modal{
+    padding: 40px;
+    width: 528px;
+    height: 581px;
+}
 
 /*button--close */
-
 
 .button--close {
     position: absolute;
@@ -90,15 +87,14 @@
         fill: $color-tex-primary;
         display: flex;
         align-items: center;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            fill: $background-color2;
+            transition-duration: 500ms;
+            transform: scale(1.5);
+        }
     }
-}
-.button--close .icon--close:hover,
-.button--close .icon--close:focus {
-    cursor: pointer;
-    fill: $background-color2;
-    transform: rotate(360deg);
-    transition-duration: 500ms;
-    transform: scale(1.5);
 }
 
 /*Form*/
@@ -191,8 +187,8 @@ textarea#comments {
 }
 
 .check--input:checked + .check--icon{
-    background-color: var(--background-color2);
-    border: var(--background-color2);
+    background-color: $background-color2;
+    border: $background-color2;
 }
 .form--policy{
     font-weight: 400;

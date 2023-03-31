@@ -296,7 +296,6 @@ section{
 .button--close .icon--close:focus {
   cursor: pointer;
   fill: var(--background-color2);
-  transform: rotate(360deg);
   transition-duration: 500ms;
   transform: scale(1.5);
 }
@@ -545,7 +544,7 @@ textarea#comments {
   letter-spacing: 0.03em;
   color: var(--color-text-secundary);
 }
-.main-team .team__social--icons{
+.main-team .team-sociaL__icons{
   width: 206px;
   display: flex;
   flex-direction: row;
@@ -553,7 +552,7 @@ textarea#comments {
   justify-content: space-around;
   margin: 16px 32px 30px 32px;
 }
-.team__social--icons--container{
+.social__icons--container{
   fill: var(--color-icons);
   width: 44px;
   height: 44px;
@@ -564,7 +563,7 @@ textarea#comments {
   margin: 0 auto;
   border-radius: 50%;
 }
-.team__social--icons--container:hover{
+.social__icons--container:hover{
   background: var(--accent-color);
   fill: var(--primary-background-color);
 }

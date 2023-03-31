@@ -28,6 +28,7 @@
     overflow: hidden;
     position: relative;
 }
+
 .briefcase-cards__item .product__overlap {
     width: 370px;
     height: 294px;
@@ -47,6 +48,7 @@
     transition-timing-function: $timing-function;
     transform: translatey(0);
 }
+
 .product__title{
     font-weight: 700;
     font-size: 18px;
